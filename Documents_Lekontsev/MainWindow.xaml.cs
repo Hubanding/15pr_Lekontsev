@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Documents_Lekontsev.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,27 @@ namespace Documents_Lekontsev
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow init;
+        public List<DocumentContext> AllDocuments = new DocumentContext().AllDocuments(new DocumentContext().GetDataDocuments());
+        public enum pages
+        {
+            main,
+            add
+        }
         public MainWindow()
         {
             InitializeComponent();
+            this.ResizeMode = ResizeMode.NoResize;
+            init = this;
+            OpenPages(pages.main);
+        }
+
+        public void OpenPages(pages _pages)
+        {
+            if (_pages == pages.main)
+                frame.Navigate(new Pages.Main());
+            else if (_pages == pages.add)
+                frame.Navigate(new Pages.Add());
         }
     }
 }
