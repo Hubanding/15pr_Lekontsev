@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Documents_Lekontsev.Elements.item"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Documents_Lekontsev.Elements"
+                         mc:Ignorable="d" 
+             d:DesignHeight="130" d:DesignWidth="500" MinHeight="130" MinWidth="500">
+    <Grid Background="White">
+        <Image x:Name="img" Source="D:\Новая папка\Documents_Lekontsev\Documents_Lekontsev\Images\file.png" HorizontalAlignment="Left" Height="50" Margin="18,20,0,0" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="lName" Content="Наименование" HorizontalAlignment="Left" Margin="89,3,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lUser" Content="Ответственный: Иванов И.И." HorizontalAlignment="Left" Margin="89,30,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lCode" Content="Код документа: 000-000" HorizontalAlignment="Left" Margin="89,56,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lStatus" Content="Статус: Входящий" HorizontalAlignment="Left" Margin="281,31,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lDate" Content="Дата поступления: 00.00.0000" HorizontalAlignment ="Left" Margin="281,5,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lDirect" Content="Направление: Строительство" HorizontalAlignment="Left" Margin="281,56,0,0" VerticalAlignment="Top"/>
+
+        <Button Content="Изменить" HorizontalAlignment="Right" Margin="0,94,113,0" VerticalAlignment="Top" Width="75" Click="EditDocument"/>
+        <Button Content="Удалить" HorizontalAlignment="Right" Margin="0,94,20,0" VerticalAlignment="Top" Width="75" Click="DeleteDocument"/>
+
+    </Grid>
+</UserControl>
